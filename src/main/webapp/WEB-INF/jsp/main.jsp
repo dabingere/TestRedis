@@ -8,6 +8,7 @@
 <h1>主界面<%=System.currentTimeMillis()%>，欢迎您：[${sessionScope.username}]</h1>
 <ul>
     系统功能列表
+    <r:hasRole name="role4">
     <li>
         <a href="admin/addUser.jsp">用户新增</a>
     </li>
@@ -27,6 +28,7 @@
         <a href="logout.do">退出系统</a>
     </li>
 </ul>
+</r:hasRole>
 <ul>
     shiro标签
     <li>

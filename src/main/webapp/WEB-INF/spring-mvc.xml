@@ -6,7 +6,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-    <!-- 通过context:component-scan元素扫描指定包下的控制器@Controller-->
+    <!-- 通过context:component-scan元素扫描指定包下的控制器@controller-->
     <!--1) 扫描com.zf及子子孙孙包下的控制器(扫描范围过大，耗时)-->
     <!--<context:component-scan base-package="com.test"/>-->
     <context:component-scan base-package="com.test" use-default-filters="false">
@@ -28,8 +28,8 @@
     <!--4) 单独处理图片、样式、js等资源 -->
     <!--     <mvc:resources location="/css/" mapping="/css/**"/>-->
     <!--     <mvc:resources location="/js/" mapping="/js/**"/>-->
-    <mvc:resources location="/images/" mapping="/images/**"/>
-    <mvc:resources mapping="/img/**" location="file:///D:/img/"/>
+<!--    <mvc:resources location="/images/" mapping="/images/**"/>-->
+<!--    <mvc:resources mapping="/img/**" location="file:///D:/img/"/>-->
 
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="basenames">
@@ -48,9 +48,9 @@
 
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <!-- 必须和用户JSP 的pageEncoding属性一致，以便正确解析表单的内容 -->
-        <property name="defaultEncoding" value="UTF-8"></property>
+        <property name="defaultEncoding" value="UTF-8"/>
         <!-- 文件最大大小(字节) 1024*1024*50=50M-->
-        <property name="maxUploadSize" value="52428800"></property>
+        <property name="maxUploadSize" value="52428800"/>
         <!--resolveLazily属性启用是为了推迟文件解析，以便捕获文件大小异常-->
         <property name="resolveLazily" value="true"/>
     </bean>
