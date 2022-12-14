@@ -68,6 +68,8 @@
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
 	</bean>
 
+	<!-- 配置自定义Realm-->
+     <bean id="shiroRealm" class="com.test."></bean>
 	<!--5.注解式事务-->
 
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
