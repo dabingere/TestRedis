@@ -64,7 +64,7 @@
         <!-- domainObjectName是要生成的实体类 -->
         <!-- enable*ByExample是否生成 example类 -->
 
-        <!--<table schema="" tableName="t_sys_permission" domainObjectName="User"
+        <!--<table schema="" tableName="t_sys_permission" domainObjectName="Permission"
                enableCountByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false">
             &lt;!&ndash; 忽略列，不生成bean 字段 &ndash;&gt;
@@ -72,7 +72,7 @@
             &lt;!&ndash; 指定列的java数据类型 &ndash;&gt;
             &lt;!&ndash; <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" /> &ndash;&gt;
         </table>
-        <table schema="" tableName="t_sys_role" domainObjectName="User"
+        <table schema="" tableName="t_sys_role" domainObjectName="Role"
                enableCountByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false">
             &lt;!&ndash; 忽略列，不生成bean 字段 &ndash;&gt;
