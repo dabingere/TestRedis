@@ -1,7 +1,9 @@
 package com.test.mapper;
 
 import com.test.model.Permission;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface PermissionMapper {
     int deleteByPrimaryKey(Integer perid);
 
